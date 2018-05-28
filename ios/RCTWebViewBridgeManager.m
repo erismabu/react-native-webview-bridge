@@ -66,6 +66,11 @@ RCT_REMAP_VIEW_PROPERTY(allowsInlineMediaPlayback, _webView.allowsInlineMediaPla
 RCT_EXPORT_VIEW_PROPERTY(onBridgeMessage, RCTDirectEventBlock)
 RCT_REMAP_VIEW_PROPERTY(keyboardDisplayRequiresUserAction, _webView.keyboardDisplayRequiresUserAction, BOOL)
 
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;
+}
+
 - (NSDictionary<NSString *, id> *)constantsToExport
 {
   return @{
